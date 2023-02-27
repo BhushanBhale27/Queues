@@ -1,0 +1,24 @@
+class Queue {
+  constructor(){
+    this.front = -1
+    this.rear = -1
+    this.q = [];
+  }
+  enque(ele){
+    if(this.front==-1){
+      this.front = this.front+1
+      this.rear = this.rear+1
+    }
+    else{
+      this.rear=this.rear+1;
+    }
+    this.q[this.rear]=ele;
+  }
+}
+var obj = new Queue();
+obj.enque(1);
+obj.enque(5);
+obj.enque(10);
+console.log(obj.q,obj.front,obj.rear);
+
+O/P = [1,5,10] 0 2
